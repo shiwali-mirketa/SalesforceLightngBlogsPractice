@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Lightning Map component will show selected Company Location" 
+    icon-name="custom:custom30">
+        <template if:true={isDisplayLocation}>
+            <div class="slds-text-heading_small">{selectedAccountName}</div>                         
+                <lightning-map
+                    map-markers={mapMarkers}
+                    markers-title={selectedAccountName}
+                    zoom-level = {zoomLevel}
+                    center = {center}>
+                </lightning-map>
+        </template>        
+    </lightning-card>
+</template>

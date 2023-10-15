@@ -1,0 +1,3 @@
+<apex:pageaccess="GLOBAL" extends="ltng:outApp">
+    <aura:dependency resource="c:navAuraToVFToLWC"/> 
+</apex:page>

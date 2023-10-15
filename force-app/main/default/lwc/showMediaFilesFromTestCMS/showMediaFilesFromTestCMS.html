@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="Featured Products List">
+        <div class="slds-medium-size_1-of-4 slds-align_absolute-center">               
+                <lightning-carousel>
+                    <template for:each={results} for:item="item">
+                        <lightning-carousel-image
+                            key={item.title}
+                            src= {item.url}
+                            header= {item.title}                
+                            href= {item.url}>
+                        </lightning-carousel-image>     
+                    </template>
+                </lightning-carousel>         
+            </div>    
+        </lightning-card>
+</template>

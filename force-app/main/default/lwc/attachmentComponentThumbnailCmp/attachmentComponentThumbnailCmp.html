@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="File Uploader">
+        <c-file-attachment-l-w-c 
+                    onrefreshlist={delegateRefreshingAttachmentList} 
+                    record-id={recordId}>
+        </c-file-attachment-l-w-c>
+        <c-attachment-related-list-cmp record-id={recordId}></c-attachment-related-list-cmp>      
+      </lightning-card>
+</template>

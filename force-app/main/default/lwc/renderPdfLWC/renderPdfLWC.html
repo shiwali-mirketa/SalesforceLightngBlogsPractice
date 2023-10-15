@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>    
+        <lightning-input-rich-text
+            placeholder="Type here something"
+            formats={allowedFormats}
+            value={myVal}>
+        </lightning-input-rich-text>
+        <lightning-button label="Save as PDF"
+                        onclick={saveAsPdf}>
+        </lightning-button>        
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="How to get LoggedIn User Details in LWC" icon-name="standard:user">
+        <div class="slds-m-around_medium">         
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" width="100%" border="1" 
+            bordercolor="#ddd" cellpadding="5" cellspacing="0" style="border-collapse:collapse; font-weight:bold;">
+                <tbody> 
+                    <tr>
+                        <td valign="top" width="50%" style="background:#eee;">User Id</td>
+                        <td valign="top" width="50%" style="color:blue;">{userId}</td>        
+                    </tr>
+                    <tr>
+                        <td style="background:#eee;">User Name</td>
+                        <td style="color: blue;">{currentUserName}</td>
+                    </tr>
+                    <tr>
+                        <td style="background:#eee;">User Email</td>
+                        <td style="color:blue;"> {currentUserEmailId}</td>
+                    </tr>
+                    <tr>
+                        <td style="background:#eee;">IsActive</td>
+                        <td style="color:blue;"> {currentIsActive}</td>
+                    </tr>
+                    <tr>
+                        <td style="background:#eee;">Alias Name</td>
+                        <td style="color:blue;"> {currentUserAlias}</td>
+                    </tr>
+                </tbody>
+            </table>  
+        </div>
+    </lightning-card>
+</template>

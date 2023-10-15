@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title="Button Unable OR Disable for Specific Profile check">
+        <br/>
+        <lightning-button 
+            slot="actions" 
+            label="Deactivate" 
+            onclick={DeactivateProcess} 
+            disabled={isButtonDisabled}> 
+        </lightning-button> 
+    </lightning-card>
+ 
+    <!--Following shows the button visibility depends on Custom Permission-->
+    <lightning-card  title="Button Rendering conditionally">
+        <template if:true={canDeactivate} >
+            <lightning-button 
+                slot="actions" 
+                label="Check Custom Permission" >
+            </lightning-button> 
+        </template>
+    </lightning-card>
+</template>

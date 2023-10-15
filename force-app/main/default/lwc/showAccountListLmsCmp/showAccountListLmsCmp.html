@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Lightning Message Service: communication between LWC Components" 
+                icon-name="custom:custom30">
+        <div class="c-container">  
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">   
+                    <template if:true={accounts.data}>                
+                        <template for:each={accounts.data} for:item="account">
+                            <div class="column" key={account.Id}
+                                data-item={account.Id} onclick={handleClick}>
+                                <div class="slds-text-heading_small">{account.Name}</div>
+                            </div>
+                        </template>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

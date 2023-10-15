@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-m-around_small">
+        <div style="height: 300px">
+          <c-test-signature-pad-lwc
+            enable-name-signing="true"
+            name-input-label="Type name here:"
+            enable-signature-drawing="true"
+            pad-label="Or draw signature here:"
+            stroke-thickness="2"
+            pen-color="black"
+            pad-color="white"
+            font="30px 'Great Vibes'"           
+          >
+          </c-test-signature-pad-lwc>
+        </div>
+        <div class="slds-m-top_small">
+          <lightning-button
+            variant="brand"
+            label="Save"
+            title="Save"
+            onclick={saveSignature}
+          ></lightning-button>
+          <lightning-button
+            variant="brand"
+            label="Clear"
+            title="Clear"
+            onclick={clearSignature}
+            class="slds-m-left_x-small"
+          ></lightning-button>
+        </div>    
+        <template if:true={imgSrc}><!--This is just print your Saved Image,  you can avaoid it-->
+          <br />
+          <br />
+          <img src={imgSrc} />
+        </template>
+      </div>
+</template>

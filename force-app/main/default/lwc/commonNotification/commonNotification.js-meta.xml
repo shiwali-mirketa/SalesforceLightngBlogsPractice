@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Notification</masterLabel>
+    <targets>
+        <target>lightning__RecordAction</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__Tab</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="isCallerFlow" type="Boolean" label="Is Caller Flow" default="true"></property>
+            <property name="notificationType" type="String" label="Notification Type" default="Alert" description="Type of notification we need to show. It can be Alert/Prompt/Confirm/Toast"/>
+            <property name="message" type="String" label="Notification Message" role="inputOnly"/>
+            <property name="variant" type="String" label="Header or Header less nofification?" default="header"  role="inputOnly" description="Need Header or Not. Possible values are header/headerless"/>
+            <property name="header" type="String" label="Header Label" role="inputOnly"/>
+            <property name="colorTheme" type="String" label="Color theme for the header" default="default" role="inputOnly"  description="Color theme for the header. choose from default, shade,inverse,alt-inverse,success,info,warning,error,offline" />
+            <property name="value" type="String" label="Selected Value" role="outputOnly"/>
+            <property name="autoCloseTime" type="Integer" label="Toast Auto Close Time." description="Toast Auto Close Time. Only required when notificationType is Toast"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

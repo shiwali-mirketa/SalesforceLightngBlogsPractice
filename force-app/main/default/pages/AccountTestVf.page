@@ -1,0 +1,14 @@
+<apex:page controller="StandardAccountDisplayController"> 
+	<apex:pageBlock title="Account List"> 
+		<apex:pageBlockTable value="{!records}" var="record"> 
+			<apex:column > 
+				<apex:facet name="header">Account Name</apex:facet> 
+				<apex:outputText value="{!record.Name}"/> 
+			</apex:column> 
+			<apex:column > 
+				<apex:facet name="header">Account Number</apex:facet> 
+				<apex:outputText value="{!record.AccountNumber}"/> 
+			</apex:column> 
+		</apex:pageBlockTable> 
+	</apex:pageBlock> 
+</apex:page>

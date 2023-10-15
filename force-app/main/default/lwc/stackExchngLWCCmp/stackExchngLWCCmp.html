@@ -1,0 +1,43 @@
+<template>
+    <div class="divcenter">Salesforce Stackexchange User Explorer</div>
+    <lightning-layout multiple-rows>
+                <lightning-layout-item size="2" padding="around-small">
+                        <lightning-combobox name="progress" label="Stack Exchange Group"
+                        value="" placeholder="Select Group" options={options} onchange={handleChange}
+                        required></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small">
+                        <lightning-combobox
+                        name="progress"
+                        label="Order By"
+                        value=""
+                        placeholder="Select Field"
+                        options={fields}
+                        onchange={handleFieldChange}
+                        required
+                ></lightning-combobox>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="4" padding="around-small">
+                        <div class="slds-m-around--medium">
+                        <lightning-button
+                        variant="base" label="Get Users" title="Get Users" onclick={handleClick}>
+                        </lightning-button>
+                        </div>
+                </lightning-layout-item>
+    </lightning-layout>
+
+
+  <div style="height: 400px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                show-row-number-column=false
+                hide-checkbox-column
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+    <div class="slds-m-around_medium">
+            <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+    </div>
+</template>
